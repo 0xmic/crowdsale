@@ -17,7 +17,7 @@ describe('Crowdsale', () => {
     const Token = await ethers.getContractFactory('Token')
 
     // Deploy token
-    token = await Token.deploy('Delta Token', 'DELTA', '1000000')
+    token = await Token.deploy('Alpha Token', 'ALPHA', '1000000')
 
     // Configure accounts
     accounts = await ethers.getSigners()

@@ -7,8 +7,8 @@
 const hre = require('hardhat')
 
 async function main() {
-  const NAME = 'Delta Token'
-  const SYMBOL = 'DELTA'
+  const NAME = 'Alpha Token'
+  const SYMBOL = 'ALPHA'
   const MAX_SUPPLY = '1000000'
   const PRICE = hre.ethers.utils.parseUnits('0.025', 'ether')
 

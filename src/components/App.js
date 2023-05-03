@@ -73,7 +73,7 @@ function App() {
     <Container>
       <Navigation />
 
-      <h1 className='my-4 text-center'>Introducing Delta Token (DELTA)</h1>
+      <h1 className='my-4 text-center'>Introducing Alpha Token (ALPHA)</h1>
       {isLoading ? (
         <Loading />
       ) : (
