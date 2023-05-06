@@ -3,6 +3,10 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
+/**
+ * @title ERC-20 Token Contract
+ * @dev This contract implements the basic functionality of an ERC-20 token.
+ */
 contract Token {
     string public name;
     string public symbol;
@@ -24,6 +28,12 @@ contract Token {
         uint256 value
     );
 
+    /**
+     * @notice Constructor to set the initial values of the token
+     * @param _name The name of the token
+     * @param _symbol The symbol of the token
+     * @param _totalSupply The total supply of the token
+     */
     constructor(
         string memory _name,
         string memory _symbol,
@@ -35,6 +45,12 @@ contract Token {
         balanceOf[msg.sender] = totalSupply;
     }
 
+    /**
+     * @notice Transfer tokens from the sender to a specified address
+     * @param _to The recipient address
+     * @param _value The amount of tokens to be transferred
+     * @return success A boolean indicating the success of the transfer
+     */
     function transfer(address _to, uint256 _value) public returns (bool success) {
         require(balanceOf[msg.sender] >= _value, "Not enough tokens");
 
@@ -43,6 +59,12 @@ contract Token {
         return true;
     }
 
+    /**
+     * @notice Internal function to transfer tokens between addresses
+     * @param _from The sender address
+     * @param _to The recipient address
+     * @param _value The amount of tokens to be transferred
+     */
     function _transfer(
         address _from,
         address _to,
@@ -56,6 +78,12 @@ contract Token {
         emit Transfer(_from, _to, _value);
     }
 
+    /**
+     * @notice Approve a specified address to spend tokens on behalf of the sender
+     * @param _spender The address allowed to spend tokens
+     * @param _value The amount of tokens allowed to be spent
+     * @return success A boolean indicating the success of the approval
+     */
     function approve(address _spender, uint256 _value)
         public
         returns (bool success)
@@ -68,6 +96,13 @@ contract Token {
         return true;
     }
 
+    /**
+     * @notice Transfer tokens from one address to another on behalf of the sender
+     * @param _from The address to transfer tokens from
+     * @param _to The address to transfer tokens to
+     * @param _value The amount of tokens to be transferred
+     * @return success A boolean indicating the success of the transfer
+     */
     function transferFrom(
         address _from,
         address _to,
