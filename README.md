@@ -32,7 +32,4 @@ npx hardhat --network localhost scripts/2_deploy_crowdsale.js
 npm run start
 ```
 
-## Deployment
-The Crowdsale has been deployed on the Sepolia and Mumbai test networks and is configured to sell an ERC-20 token, Alpha Token (ALPHA). Users can buy ALPHA tokens using Ether at a specified price set by the contract owner. The Crowdsale contract also has a maximum token limit that can be sold during the crowdsale. The contract owner can finalize the crowdsale, which transfers unsold tokens and Ether raised back to the owner.
-
 ![Crowdsale](./public/crowdsale.png)
