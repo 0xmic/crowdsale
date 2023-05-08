@@ -26,6 +26,8 @@ function App() {
   const [price, setPrice] = useState(0)
   const [maxTokens, setMaxTokens] = useState(0)
   const [tokensSold, setTokensSold] = useState(0)
+  const [minPurchase, setMinPurchase] = useState(0)
+  const [maxPurchase, setMaxPurchase] = useState(0)
 
   const [isLoading, setIsLoading] = useState(true)
 
@@ -57,6 +59,12 @@ function App() {
     const maxTokens = ethers.utils.formatUnits(await crowdsale.maxTokens(), 18)
     setMaxTokens(maxTokens)
 
+    const minPurchase = ethers.utils.formatUnits(await crowdsale.minPurchase(), 18)
+    setMinPurchase(minPurchase)
+
+    const maxPurchase = ethers.utils.formatUnits(await crowdsale.maxPurchase(), 18)
+    setMaxPurchase(maxPurchase)
+
     const tokensSold = ethers.utils.formatUnits(await crowdsale.tokensSold(), 18)
     setTokensSold(tokensSold)
 
@@ -81,6 +89,12 @@ function App() {
           <p className='text-center'>
             <strong>Current Price: </strong>
             {price} ETH
+          </p>
+          <hr />
+          <p className='text-center'>
+            <strong>Min Purchase Amount: </strong>
+            {minPurchase} ALPHA |<strong> Max Purchase Amount: </strong>
+            {maxPurchase} ALPHA
           </p>
           <Buy provider={provider} price={price} crowdsale={crowdsale} setIsLoading={setIsLoading} />
           <Progress maxTokens={maxTokens} tokensSold={tokensSold} />
