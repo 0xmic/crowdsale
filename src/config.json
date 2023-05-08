@@ -9,18 +9,18 @@
   },
   "11155111": {
     "token": {
-      "address": ""
+      "address": "0x5AC143CE2b44D1A0Db0C92D5BbA8a820b9fF2fD9"
     },
     "crowdsale": {
-      "address": ""
+      "address": "0x35a27A395eC872A5EF2B2412b2ADbD4644DE0da9"
     }
   },
   "80001": {
     "token": {
-      "address": ""
+      "address": "0x4cd1770a9F5685f2aDB7d084Bb6De30E56288304"
     },
     "crowdsale": {
-      "address": ""
+      "address": "0xd1c03eD49B4b2Bfe9413C6Cf2a07dA24bf5Ef7cA"
     }
   }
 }

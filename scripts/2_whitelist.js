@@ -25,11 +25,8 @@ async function main() {
   console.log(`Deployer address: ${deployer.address}\n`)
 
   // Array of addresses to be added to the whitelist
-  const addressesToWhitelist = [
-    // List addresses as comma separated strings: ['0x000000','0x000000']
-    deployer.address,
-    accounts[1].address
-  ]
+  // List addresses as comma separated strings: ['0x000000','0x000000']
+  const addressesToWhitelist = []
 
   // Add addresses to the whitelist
   for (const address of addressesToWhitelist) {
